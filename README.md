@@ -17,4 +17,4 @@ docker run -v $(pwd):/app monitor
 - Python 3.11
 - Docker
 - Docker Compose
-Отредактируй и нажми Commit changes.Claude Fable 5 is currently unavailable.
+
