@@ -1,14 +1,5 @@
 services:
   monitor:
-    build: .
-    environment:
-      - API_URL=https://open.er-api.com/v6/latest/RUB
-    volumes:
-      - /Users/timmyturner/Python/testdocker:/app
-    depends_on:
-      - redis
-
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379" 
+    image: tiltimmy/site-monitor:latest
+    env_file:
+      - .env
