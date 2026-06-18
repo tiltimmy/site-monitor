@@ -54,3 +54,4 @@ https://hvdhvfjfjf.com недоступен.
 - Docker
 - Docker Compose
 - GitHub Actions
+- Docker Hub 
