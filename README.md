@@ -16,24 +16,16 @@ git clone https://github.com/tiltimmy/site-monitor.git
 cd site-monitor
 ```
 
+Создай файл `.env` в папке проекта:
+
+```
+API_URL=https://open.er-api.com/v6/latest/RUB
+```
+
 Запусти через Docker Compose:
 
 ```bash
 docker compose up
-```
-
-## Переменные окружения
-
-Перед запуском установи переменную окружения:
-
-```bash
-export API_URL="https://open.er-api.com/v6/latest/RUB"
-```
-
-Или передай напрямую при запуске:
-
-```bash
-docker run -e API_URL="https://open.er-api.com/v6/latest/RUB" monitor
 ```
 
 ## Результат
@@ -48,8 +40,17 @@ https://hvdhvfjfjf.com недоступен.
 
 Результаты также записываются в `log.txt`.
 
+## CI/CD
+
+Проект использует GitHub Actions для автоматического деплоя:
+
+1. При каждом push в `main` запускаются тесты
+2. Собирается Docker образ и пушится в Docker Hub
+3. Сервер автоматически скачивает новый образ и перезапускает контейнер
+
 ## Технологии
 
 - Python 3.11
 - Docker
 - Docker Compose
+- GitHub Actions
